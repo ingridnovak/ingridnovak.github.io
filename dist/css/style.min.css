@@ -75,11 +75,77 @@
 .github_buttons {
   display: flex;
 }
+.github_buttons a {
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
 
-@media screen and (min-width: 992px) {
+.btn {
+  color: #24292f;
+  background-color: #ecebeb;
+  border: 1px solid rgba(27, 31, 36, 0.1490196078);
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  height: 26px;
+}
+
+.btn-add, .btn-sm {
+  padding: 3px 12px;
+  line-height: 20px;
+}
+
+.btn-add {
+  margin-right: 10px;
+  color: black;
+  font-weight: 700;
+  border-left: hidden;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 26px;
+  border-width: thin;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.btn-add::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.octicon {
+  padding-right: 3px;
+}
+
+@media screen and (min-width: 768px) {
   .button--download {
     width: 390px;
     height: 62px;
+  }
+  .button__description {
+    padding-top: 81px;
+  }
+  .present__title {
+    font-size: 42px;
+  }
+  .present__description {
+    padding-top: 33px;
+    width: 689px;
+    font-size: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .present__title {
+    font-size: 52px;
+  }
+  .present__description {
+    width: 861px;
+    font-size: 21px;
   }
 }
 * {
