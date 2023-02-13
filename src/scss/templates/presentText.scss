@@ -1,4 +1,5 @@
 @import "../mixin/mixins";
+@import "../variables/variables";
 .presentText{
   display: flex;
 }
@@ -11,51 +12,48 @@
   justify-content: center;
 }
 .button--download{
-  background: #8D81AC;
+  background: $color--lightViolet;
   border-radius: 40px;
   position: absolute;
   width: 290px;
   height: 45px;
   border: 0;
-  font-family: 'Montserrat';
+  font-family: $font-family__Monserrat;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   text-align: center;
-  color: #FFFFFF;
+  color: $color--white;
+  &:hover{
+    background: #FFFFFF;
+    border: 2px solid #8D81AC;
+    color: #8D81AC;
+  }
 }
 .button__description{
   padding-top: 58px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
+ @include font_normal_Monserrat;
   text-align: center;
 
   color: #848E97;
 }
 .present__description{
+  @include font_normal_Lato;
   padding-top: 27px;
   text-align: center;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #323232;
+  color: $color--darkText;
   width: 276px;
 }
 .present__title{
-  font-family: 'Montserrat';
+  font-family: $font-family__Monserrat;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
-  color: #635C73;
+  color:$color--darkViolet;
 
 }
 .present__text{
@@ -63,55 +61,13 @@
   padding-top: 79px;
   padding-bottom: 36px;
 }
-.github_buttons{
+.github_buttons {
+  width: 251px;
+  height: 80px;
+  flex-wrap: wrap;
   display: flex;
-  & a{
-    text-decoration: none;
-    font-weight: 700;
-    font-family: 'Montserrat';
-  }
+  justify-content: space-evenly;
 }
-.btn{
-  color: #24292f;
-  background-color: #ecebeb;
-  border: 1px solid #1b1f2426;
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
-  display: flex;
-  align-items: center;
-
-  white-space: nowrap;
-  vertical-align: middle;
-  height: 26px;
-
-}
-
-.btn-add, .btn-sm {
-  padding: 3px 12px;
-  line-height: 20px;
-}
-.btn-add {
-  margin-right: 10px;
-  color: black;
-  font-weight: 700;
-  border-left: hidden;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  height: 26px;
-  border-width: thin;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  &::after {
-    display: table;
-    clear: both;
-    content: "";
-  }
-}
-  .octicon{
-    padding-right: 3px;
-  }
 
 @media screen and (min-width: 768px){
   .button--download{
@@ -125,12 +81,15 @@
     font-size: 42px;
   }
   .present__description{
-    padding-top: 33px;
+    padding-top: 35px;
     width: 689px;
     font-size: 21px;
   }
+  .github_buttons{
+    width: 365px;
+  }
 }
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 992px){
   .present__title{
     font-size: 52px;
   }
