@@ -29,6 +29,11 @@
   text-align: center;
   color: #FFFFFF;
 }
+.button--download:hover {
+  background: #FFFFFF;
+  border: 2px solid #8D81AC;
+  color: #8D81AC;
+}
 
 .button__description {
   padding-top: 58px;
@@ -42,13 +47,13 @@
 }
 
 .present__description {
-  padding-top: 27px;
-  text-align: center;
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  padding-top: 27px;
+  text-align: center;
   color: #323232;
   width: 276px;
 }
@@ -73,53 +78,11 @@
 }
 
 .github_buttons {
+  width: 251px;
+  height: 80px;
+  flex-wrap: wrap;
   display: flex;
-}
-.github_buttons a {
-  text-decoration: none;
-  font-weight: 700;
-  font-family: "Montserrat";
-}
-
-.btn {
-  color: #24292f;
-  background-color: #ecebeb;
-  border: 1px solid rgba(27, 31, 36, 0.1490196078);
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  height: 26px;
-}
-
-.btn-add, .btn-sm {
-  padding: 3px 12px;
-  line-height: 20px;
-}
-
-.btn-add {
-  margin-right: 10px;
-  color: black;
-  font-weight: 700;
-  border-left: hidden;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  height: 26px;
-  border-width: thin;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.btn-add::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.octicon {
-  padding-right: 3px;
+  justify-content: space-evenly;
 }
 
 @media screen and (min-width: 768px) {
@@ -134,12 +97,15 @@
     font-size: 42px;
   }
   .present__description {
-    padding-top: 33px;
+    padding-top: 35px;
     width: 689px;
     font-size: 21px;
   }
+  .github_buttons {
+    width: 365px;
+  }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .present__title {
     font-size: 52px;
   }
@@ -155,24 +121,27 @@
 }
 
 .container {
-  min-width: 320px;
+  width: 100%;
   max-width: 1200px;
+  min-width: 320px;
   padding: 0 5px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .container {
-    width: 320px;
+    min-width: 320px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 992px) {
   .container {
-    width: 768px;
+    min-width: 481px;
+    max-width: 992px;
   }
 }
 @media screen and (min-width: 993px) and (max-width: 1200px) {
   .container {
-    width: 1200px;
+    min-width: 993px;
   }
 }
