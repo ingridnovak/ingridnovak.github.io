@@ -42,11 +42,7 @@ export const scss = () => {
         )
         //Розкоментувати якщо потрібен не стиснутий файл css
         // .pipe(app.gulp.dest(app.path.build.css))
-            .pipe(
-                app.plugins.if(
-                    app.isBuild,
-                    cleanCss())
-            )
+            .pipe(cleanCss())
         .pipe(rename({
             extname: ".min.css"
         }))
