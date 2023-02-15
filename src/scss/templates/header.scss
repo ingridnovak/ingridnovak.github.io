@@ -1,0 +1,170 @@
+@import "../mixin/mixins";
+@import "../variables/variables";
+
+.header {
+  @include row_flex_space-between;
+  background-color: rgba(39, 38, 42, 1);
+  padding: 31px 15px;
+}
+
+.buy-btn {
+    width: 119px;
+    height: 37px;
+    background-color: $color--lightViolet;
+    border-radius: 40px;
+    @include font_bold_Monserrat;
+    color: white;
+    text-align: center;
+    transition: $transition;
+
+    &:hover {
+      background-color: white;
+      color: $color--lightViolet;
+    }
+}
+
+.header-logo__item {
+  width: 43px;
+  height: 41px;
+  @include background_picture;
+  background-image: url(../img/design/header_logo.png);
+  transition: $transition;
+
+  &:hover {
+    background-image: url(../img/design/header_logo_hover.png);
+  }
+}
+
+
+.navbar-icon {
+  display: inline-block;
+  position:relative;
+  cursor: pointer;
+  height: 21px;
+  width: 26px;
+  transition: $transition;
+  z-index: 0;
+  &:hover {
+    transform: scale(0.93);
+  }
+
+  &__line {
+    background-color: white;
+    width: 26px;
+    margin: 6px 0;
+    height: 3px;
+    border-radius: 2px;
+    transition: $transition;
+  }
+
+  &__line--short{
+    width:15px;
+    position: relative;
+    right: -11px;
+    top:0;
+    margin: 0;
+  }
+
+}
+ .change .navbar-icon__line:first-child{
+   opacity: 0;
+}
+
+ .change .navbar-icon__line:nth-child(2) {
+   transform: translate(0, 4px) rotate(-45deg);
+   border-radius: 0;
+   height: 2px;
+   width: 35px;
+ }
+
+.change .navbar-icon__line:last-child {
+  transform: translate(0, -4px) rotate(45deg);
+  border-radius: 0;
+  height: 2px;
+  width: 35px;
+}
+
+
+.navbar-list {
+  position: absolute;
+  top: 103px;
+  right: 15px;
+  width: 293px;
+  bottom: 100%;
+  height: 0;
+  overflow: hidden;
+  background-color: $color--navbarbackground;
+  transition: $transition;
+  z-index: 1;
+  &.active {
+    bottom: 0;
+    height: 378px;
+  }
+  &__item {
+    height: 89px;
+    box-shadow: 0 -2px 0 0 #3B3B3B, 0 3px 0 0 #3B3B3B;
+    text-align: left;
+    &::after {
+      height: 0;
+    }
+    &:hover::after {
+      content:'';
+      position:absolute;
+      display:block;
+      top: 12px;
+      left:0;
+      width:8px;
+      height: 53px;
+      color: $color--lightViolet;
+      z-index: 5;
+    }
+  }
+  &__link {
+    color:white;
+    display:inline-block;
+    padding: 29px 0 0 40px;
+    @include font_normal_Monserrat;
+    font-size: 26px;
+    line-height: 26px;
+    &:hover {
+      color: #8D81AC;
+    }
+  }
+}
+
+.hero-section {
+  padding: 49px 0 410px 0;
+  @include column_flex-center;
+  background-image: url('../img/design/header_background.png');
+  @include background_picture;
+  &__title {
+    @include font_bold_Monserrat;
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 19px ;
+    color: white;
+  }
+  &__text-info {
+    @include font_normal_Monserrat;
+    font-size: 18px;
+    line-height: 24px;
+    color:$color--lightViolet;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  &__text-devices {
+    @include font_normal_Monserrat;
+    color:$color--grey;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+
+
+
+
+
