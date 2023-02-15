@@ -1,0 +1,57 @@
+@import "../mixin/mixins";
+@import "../variables/variables";
+.feature{
+  padding-top: 120px;
+}
+.feature__title{
+@include font_normal_Monserrat;
+  font-size: 32px;
+  font-weight: 700;
+  color: $color--lightViolet;
+  text-align: center;
+}
+.feature__item{
+  text-align: center;
+  padding-top: 36px;
+}
+.item__title{
+  @include font_normal_Monserrat;
+  font-size: 16px;
+  color: $color--darkTitle;
+  width: 96%;
+  &::before{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 27px;
+  }
+}
+.item__description{
+  @include font_normal_Lato;
+  line-height: 21px;
+  padding-top: 14px;
+  color:  $color__greyDescription;
+  width: 96%;
+}
+.item--first{
+  &::before{
+    content: url('@img/iconFeat1.svg');
+  }
+}
+.item--second{
+  &::before{
+    content: url('@img/iconFeat2.svg');
+
+  }
+}
+.item--third{
+  &::before{
+    content: url('@img/iconFeat3.svg');
+
+  }
+}
+.item--fourth{
+  &::before{
+    content: url('@img/iconFeat4.svg');
+
+  }
+}

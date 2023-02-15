@@ -10,14 +10,17 @@ const sass = gulpSass(dartSass);
 
 
 export const scss = () => {
+
     return app.gulp.src(app.path.src.scss, {sourcemaps: app.isDev },)
+        .pipe(app.plugins.replace(/@img\//g,'../img/'))
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "SCSS",
                 message: "Error: <%= error.message %>"
             })
         ))
-        .pipe(app.plugins.replace(/@img\//g, '../img/'))
+
+
         .pipe(
             sass({
                 outputStyle: 'expanded',
@@ -46,6 +49,8 @@ export const scss = () => {
         .pipe(rename({
             extname: ".min.css"
         }))
+        .pipe(app.plugins.replace(/@img\//g,'../img/'))
         .pipe(app.gulp.dest(app.path.build.css))
+
         .pipe(app.plugins.browsersync.stream());
 }

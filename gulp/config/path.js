@@ -24,6 +24,7 @@ export const path = {
     },
     watch:{
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif}`,
+        svg:`${srcFolder}/img/**/*.svg`,
         js: `${srcFolder}/js/**/*.js`,
         scss: `${srcFolder}/scss/**/*.scss`,
         html: `${srcFolder}/**/*.html`,
