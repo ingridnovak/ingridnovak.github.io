@@ -1,0 +1,334 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(39, 38, 42);
+  padding: 31px 15px;
+}
+
+.buy-btn {
+  width: 119px;
+  height: 37px;
+  background-color: #8D81AC;
+  border-radius: 40px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 15px;
+  color: white;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+}
+.buy-btn:hover {
+  background-color: white;
+  color: #8D81AC;
+}
+
+.header-logo__item {
+  width: 43px;
+  height: 41px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/design/header_logo.png);
+  transition: 0.2s all ease-in-out;
+}
+.header-logo__item:hover {
+  background-image: url(../img/design/header_logo_hover.png);
+}
+
+.navbar-icon {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 21px;
+  width: 26px;
+  transition: 0.2s all ease-in-out;
+  z-index: 0;
+}
+.navbar-icon:hover {
+  transform: scale(0.93);
+}
+.navbar-icon__line {
+  background-color: white;
+  width: 26px;
+  margin: 6px 0;
+  height: 3px;
+  border-radius: 2px;
+  transition: 0.2s all ease-in-out;
+}
+.navbar-icon__line--short {
+  width: 15px;
+  position: relative;
+  right: -11px;
+  top: 0;
+  margin: 0;
+}
+
+.change .navbar-icon__line:first-child {
+  opacity: 0;
+}
+
+.change .navbar-icon__line:nth-child(2) {
+  transform: translate(0, 4px) rotate(-45deg);
+  border-radius: 0;
+  height: 2px;
+  width: 35px;
+}
+
+.change .navbar-icon__line:last-child {
+  transform: translate(0, -4px) rotate(45deg);
+  border-radius: 0;
+  height: 2px;
+  width: 35px;
+}
+
+.navbar-list {
+  position: absolute;
+  top: 103px;
+  right: 15px;
+  width: 293px;
+  bottom: 100%;
+  height: 0;
+  overflow: hidden;
+  background-color: #333333;
+  transition: 0.2s all ease-in-out;
+  z-index: 1;
+}
+.navbar-list.active {
+  bottom: 0;
+  height: 378px;
+}
+.navbar-list__item {
+  height: 89px;
+  box-shadow: 0 -2px 0 0 #3B3B3B, 0 3px 0 0 #3B3B3B;
+  text-align: left;
+}
+.navbar-list__item::after {
+  height: 0;
+}
+.navbar-list__item:hover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 12px;
+  left: 0;
+  width: 8px;
+  height: 53px;
+  color: #8D81AC;
+  z-index: 5;
+}
+.navbar-list__link {
+  color: white;
+  display: inline-block;
+  padding: 29px 0 0 40px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-size: 26px;
+  line-height: 26px;
+}
+.navbar-list__link:hover {
+  color: #8D81AC;
+}
+
+.hero-section {
+  padding: 49px 0 410px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/design/header_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero-section__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 15px;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 19px;
+  color: white;
+}
+.hero-section__text-info {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #8D81AC;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.hero-section__text-devices {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #848E97;
+  text-transform: uppercase;
+}
+
+.presentText {
+  display: flex;
+}
+
+.presentText__elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presentText__button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button--download {
+  background: #8D81AC;
+  border-radius: 40px;
+  position: absolute;
+  width: 290px;
+  height: 45px;
+  border: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.button--download:hover {
+  background: #FFFFFF;
+  border: 2px solid #8D81AC;
+  color: #8D81AC;
+}
+
+.button__description {
+  padding-top: 58px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #848E97;
+}
+
+.present__description {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 27px;
+  text-align: center;
+  color: #323232;
+  width: 276px;
+}
+
+.present__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #635C73;
+}
+
+.present__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 79px;
+  padding-bottom: 36px;
+}
+
+.github_buttons {
+  width: 251px;
+  height: 80px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 768px) {
+  .button--download {
+    width: 390px;
+    height: 62px;
+  }
+  .button__description {
+    padding-top: 81px;
+  }
+  .present__title {
+    font-size: 42px;
+  }
+  .present__description {
+    padding-top: 35px;
+    width: 689px;
+    font-size: 21px;
+  }
+  .github_buttons {
+    width: 365px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .present__title {
+    font-size: 52px;
+  }
+  .present__description {
+    width: 861px;
+    font-size: 21px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  transition: 0.2s all ease-in-out;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 320px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    min-width: 320px;
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 992px) {
+  .container {
+    min-width: 481px;
+    max-width: 992px;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .container {
+    min-width: 993px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
