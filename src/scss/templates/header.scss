@@ -108,15 +108,17 @@
       height: 0;
     }
     &:hover::after {
-      content:'';
-      position:absolute;
-      display:block;
-      top: 12px;
-      left:0;
-      width:8px;
+      content: "";
+      outline: 2px solid #8d81ac;
+      position: relative;
+      top: -42%;
+      left: 0;
+      width: 8px;
       height: 53px;
-      color: $color--lightViolet;
-      z-index: 5;
+      z-index: 11;
+      background: #8d81ac;
+      display: block;
+
     }
   }
   &__link {
