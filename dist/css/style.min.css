@@ -1,9 +1,15 @@
+/*
+@mixin parallax {
+    background-attachment: fixed;
+    }*/
 .header {
+  background-color: rgb(39, 38, 42);
+}
+.header__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(39, 38, 42);
   padding: 31px 15px;
 }
 
@@ -15,8 +21,6 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 15px;
   color: white;
   text-align: center;
   transition: 0.2s all ease-in-out;
@@ -24,37 +28,39 @@
 .buy-btn:hover {
   background-color: white;
   color: #8D81AC;
+  cursor: pointer;
 }
 
-.header-logo__item {
+.header-logo__picture {
   width: 43px;
   height: 41px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../img/design/header_logo.png);
-  transition: 0.2s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  margin-right: 17px;
 }
-.header-logo__item:hover {
+.header-logo:hover .header-logo__picture {
   background-image: url(../img/design/header_logo_hover.png);
+}
+
+.header-navbar {
+  height: 23px;
+  width: 35px;
 }
 
 .navbar-icon {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  height: 21px;
-  width: 26px;
   transition: 0.2s all ease-in-out;
   z-index: 0;
-}
-.navbar-icon:hover {
-  transform: scale(0.93);
 }
 .navbar-icon__line {
   background-color: white;
   width: 26px;
-  margin: 6px 0;
+  margin-bottom: 6px;
   height: 3px;
   border-radius: 2px;
   transition: 0.2s all ease-in-out;
@@ -64,9 +70,10 @@
   position: relative;
   right: -11px;
   top: 0;
-  margin: 0;
 }
 
+/*==============================================================*/
+/*CHANGE icon must be fixed!*/
 .change .navbar-icon__line:first-child {
   opacity: 0;
 }
@@ -85,6 +92,7 @@
   width: 35px;
 }
 
+/*==============================================================*/
 .navbar-list {
   position: absolute;
   top: 103px;
@@ -106,21 +114,8 @@
   box-shadow: 0 -2px 0 0 #3B3B3B, 0 3px 0 0 #3B3B3B;
   text-align: left;
 }
-.navbar-list__item::after {
-  height: 0;
-}
-.navbar-list__item:hover::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 12px;
-  left: 0;
-  width: 8px;
-  height: 53px;
-  color: #8D81AC;
-  z-index: 5;
-}
 .navbar-list__link {
+  position: relative;
   color: white;
   display: inline-block;
   padding: 29px 0 0 40px;
@@ -132,8 +127,21 @@
   font-size: 26px;
   line-height: 26px;
 }
-.navbar-list__link:hover {
+.navbar-list__link::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 2px;
+  border-left: 8px solid #8D81AC;
+  z-index: 5;
+  height: 0;
+  transition: 0.2s all ease-in-out;
+}
+.navbar-list__link:focus {
   color: #8D81AC;
+}
+.navbar-list__link:focus::after {
+  height: 53px;
 }
 
 .hero-section {
@@ -150,8 +158,6 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 15px;
   font-size: 48px;
   line-height: 48px;
   margin-bottom: 19px;
@@ -179,6 +185,214 @@
   text-transform: uppercase;
 }
 
+/*============================================================================*/
+/*MEDIA*/
+/*============================================================================*/
+@media screen and (min-width: 481px) and (max-width: 992px) {
+  .header-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-logo__text {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #8D81AC;
+    transition: 0.2s all ease-in-out;
+  }
+  .header-logo:hover .header-logo__text {
+    color: white;
+  }
+  .header__nav {
+    padding: 22px 20px 56px 20px;
+  }
+  .header-navbar {
+    display: none;
+  }
+  .buy-btn {
+    width: 145px;
+    height: 38px;
+  }
+  .navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s all ease-in-out;
+    background-color: rgb(39, 38, 42);
+    right: 124px;
+    bottom: unset;
+    height: 21px;
+    width: 68%;
+    overflow: initial;
+    top: 80px;
+  }
+  .navbar-list__item {
+    text-align: center;
+    height: unset;
+    box-shadow: none;
+  }
+  .navbar-list__link {
+    color: #8D81AC;
+    display: inline-block;
+    padding: 0 5px 0 0;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .navbar-list__link:hover {
+    color: white;
+  }
+  .navbar-list__link:focus::after {
+    display: none;
+  }
+  .hero-section {
+    padding: 69px 0 472px 0;
+  }
+  .hero-section__title {
+    font-size: 72px;
+    line-height: 72px;
+  }
+  .hero-section__text-info {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 19px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .header-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-logo__text {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #8D81AC;
+    transition: 0.2s all ease-in-out;
+  }
+  .header-logo:hover .header-logo__text {
+    color: white;
+  }
+  .header {
+    background: #010005;
+  }
+  .header__nav {
+    padding: 30px 90px 30px 90px;
+  }
+  .header-navbar {
+    display: none;
+  }
+  .header__btn {
+    position: relative;
+  }
+  .buy-btn {
+    width: 145px;
+    height: 38px;
+  }
+  .navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background-color: transparent;
+    right: 284px;
+    bottom: unset;
+    height: 21px;
+    width: 44%;
+    overflow: initial;
+    top: 37px;
+  }
+  .navbar-list__item {
+    text-align: center;
+    height: unset;
+    box-shadow: none;
+  }
+  .navbar-list__link {
+    color: #8D81AC;
+    display: inline-block;
+    padding: 0 5px 0 0;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .navbar-list__link:hover {
+    color: white;
+  }
+  .navbar-list__link:focus::after {
+    display: none;
+  }
+  .hero-section {
+    padding: 83px 0 424px 0;
+  }
+  .hero-section__title {
+    font-size: 82px;
+    line-height: 82px;
+  }
+  .hero-section__text-info {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 19px;
+  }
+  .hero-section__text-devices {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .navbar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    right: -85px;
+    bottom: unset;
+    height: 21px;
+    width: 44%;
+    overflow: initial;
+    top: -4px;
+  }
+  .navbar-list__item {
+    text-align: center;
+    height: unset;
+    box-shadow: none;
+  }
+  .navbar-list__link {
+    color: #8D81AC;
+    display: inline-block;
+    padding: 0 5px 0 0;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .navbar-list__link:hover {
+    color: white;
+  }
+  .navbar-list__link:focus::after {
+    display: none;
+  }
+}
+/*
+@mixin parallax {
+    background-attachment: fixed;
+    }*/
 .presentText {
   display: flex;
 }
@@ -228,7 +442,7 @@
 }
 
 .present__description {
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -298,7 +512,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/ /*in reset.css*/
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
