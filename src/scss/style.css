@@ -457,8 +457,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 28px;
+  font-size: 28px;
   text-align: center;
   text-transform: uppercase;
   color: #635C73;
@@ -480,7 +479,7 @@
   justify-content: space-evenly;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 992px) {
   .button--download {
     width: 390px;
     height: 62px;
@@ -493,7 +492,7 @@
   }
   .present__description {
     padding-top: 35px;
-    width: 689px;
+    width: 100%;
     font-size: 21px;
   }
   .github_buttons {
@@ -501,12 +500,23 @@
   }
 }
 @media screen and (min-width: 992px) {
+  .button--download {
+    width: 390px;
+    height: 62px;
+  }
+  .button__description {
+    padding-top: 81px;
+  }
   .present__title {
     font-size: 52px;
   }
   .present__description {
     width: 861px;
     font-size: 21px;
+  }
+  .github_buttons {
+    width: 365px;
+    max-width: 36%;
   }
 }
 * {
@@ -527,7 +537,7 @@ a {
   width: 100%;
   max-width: 1200px;
   min-width: 320px;
-  padding: 0 5px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 

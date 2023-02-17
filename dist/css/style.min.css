@@ -1,3 +1,4 @@
+
 /*
 @mixin parallax {
     background-attachment: fixed;
@@ -548,3 +549,6 @@ a {
     min-width: 993px;
   }
 }
+
+.presentText{display:flex}.presentText__elements{display:flex;flex-direction:column;align-items:center}.presentText__button{width:100%;display:flex;justify-content:center}.button--download{background:#8d81ac;border-radius:40px;position:absolute;width:290px;height:45px;border:0;font-family:Montserrat;font-style:normal;font-weight:700;font-size:18px;line-height:20px;text-align:center;color:#fff}.button--download:hover{background:#fff;border:2px solid #8d81ac;color:#8d81ac}.button__description{padding-top:58px;font-family:Montserrat;font-style:normal;font-weight:400;font-size:14px;line-height:14px;text-align:center;color:#848e97}.present__description{font-family:Lato;font-style:normal;font-weight:400;font-size:14px;line-height:20px;padding-top:27px;text-align:center;color:#323232;width:276px}.present__title{font-family:Montserrat;font-style:normal;font-weight:700;font-size:26px;text-align:center;text-transform:uppercase;color:#635c73}.present__text{display:flex;flex-direction:column;align-items:center;padding-top:79px;padding-bottom:36px}.github_buttons{width:250px;height:80px;flex-wrap:wrap;display:flex;justify-content:space-evenly}@media screen and (min-width:481px) and (max-width:992px){.button--download{width:390px;height:62px}.button__description{padding-top:81px}.present__title{font-size:42px}.present__description{padding-top:35px;width:100%;font-size:21px}.github_buttons{width:365px}}@media screen and (min-width:992px){.button--download{width:390px;height:62px}.button__description{padding-top:81px}.present__title{font-size:52px}.present__description{width:861px;font-size:21px}.github_buttons{width:365px;max-width:36%}}*{margin:0;padding:0;box-sizing:border-box}.container{width:100%;max-width:1200px;min-width:320px;padding:0 10px;margin:0 auto}@media screen and (min-width:320px) and (max-width:480px){.container{min-width:320px;max-width:480px}}@media screen and (min-width:481px) and (max-width:992px){.container{min-width:481px;max-width:992px}}@media screen and (min-width:993px) and (max-width:1200px){.container{min-width:993px}}
+
