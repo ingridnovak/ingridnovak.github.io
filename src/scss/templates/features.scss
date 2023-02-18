@@ -1,7 +1,7 @@
 @import "../mixin/mixins";
 @import "../variables/variables";
 .feature{
-  padding-top: 120px;
+  padding-top: 30px;
 }
 .feature__elements{
   padding-bottom: 60px;
@@ -100,6 +100,63 @@
    height: 519px;
     background-size: 700px;
  }
+  .feature__photo{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 993px){
+  .feature{
+    background-color: #F4F4F4;;
+  }
+  .feature__item{
+    display: flex;
+    justify-content: space-evenly;
+    width: 98%;
+    padding-top: 61px;
+    text-align: left;
+    &::before{
+      width: 111px;
+    }
+
+  }
+  .feature__adaptive{
+    display: flex;
+    flex-direction: row-reverse;
+
+    align-items: center;
+  }
+
+  .feature__title{
+    font-size: 48px;
+    width: 155%;
+    height: 46px;
+
+  }
+  .item--first{
+    width: 114%;
+  }
+  .item__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 87%;
+
+  }
+  .feature__content{
+display: flex;
+    align-items: flex-end;
+  }
+
+  .item__description{
+    @include font_normal_Monserrat;
+  }
+  .feature__photo--relative{
+    background: url("@img/editor.svg");
+    width: 688px;
+    height: 519px;
+    background-size: 700px;
+  }
   .feature__photo{
     display: flex;
     justify-content: flex-end;
