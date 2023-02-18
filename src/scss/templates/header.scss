@@ -1,81 +1,94 @@
 @import "../mixin/mixins";
 @import "../variables/variables";
 
+
 .header {
-  @include row_flex_space-between;
   background-color: rgba(39, 38, 42, 1);
-  padding: 31px 15px;
+
+  &__nav {
+    @include row_flex_space-between;
+    padding: 31px 15px;
+  }
 }
 
 .buy-btn {
-    width: 119px;
-    height: 37px;
-    background-color: $color--lightViolet;
-    border-radius: 40px;
-    @include font_bold_Monserrat;
-    color: white;
-    text-align: center;
-    transition: $transition;
-
-    &:hover {
-      background-color: white;
-      color: $color--lightViolet;
-    }
-}
-
-.header-logo__item {
-  width: 43px;
-  height: 41px;
-  @include background_picture;
-  background-image: url(../img/design/header_logo.png);
+  width: 119px;
+  height: 37px;
+  background-color: $color--lightViolet;
+  border-radius: 40px;
+  @include font_bold_Monserrat;
+  color: white;
+  text-align: center;
   transition: $transition;
 
   &:hover {
-    background-image: url(../img/design/header_logo_hover.png);
+    background-color: white;
+    color: $color--lightViolet;
+    cursor: pointer;
   }
 }
 
+.header-logo {
+
+  &__picture {
+    width: 43px;
+    height: 41px;
+    @include background_picture;
+    background-image: url(../img/design/header_logo.png);
+    transition: 0.3s all ease-in-out;
+    margin-right: 17px;
+  }
+
+  &:hover {
+    .header-logo__picture {
+      background-image: url(../img/design/header_logo_hover.png);
+    }
+  }
+}
+
+
+.header-navbar {
+  height: 23px;
+  width: 35px;
+}
 
 .navbar-icon {
   display: inline-block;
-  position:relative;
+  position: relative;
   cursor: pointer;
-  height: 21px;
-  width: 26px;
   transition: $transition;
   z-index: 0;
-  &:hover {
-    transform: scale(0.93);
-  }
 
   &__line {
     background-color: white;
     width: 26px;
-    margin: 6px 0;
+    margin-bottom: 6px;
     height: 3px;
     border-radius: 2px;
     transition: $transition;
   }
 
-  &__line--short{
-    width:15px;
+  &__line--short {
+    width: 15px;
     position: relative;
     right: -11px;
-    top:0;
-    margin: 0;
+    top: 0;
   }
 
 }
- .change .navbar-icon__line:first-child{
-   opacity: 0;
+
+/*==============================================================*/
+/*CHANGE icon must be fixed!*/
+.change .navbar-icon__line:first-child {
+  opacity: 0;
 }
 
- .change .navbar-icon__line:nth-child(2) {
-   transform: translate(0, 4px) rotate(-45deg);
-   border-radius: 0;
-   height: 2px;
-   width: 35px;
- }
+.change .navbar-icon__line:nth-child(2) {
+  transform: translate(0, 4px) rotate(-45deg);
+  border-radius: 0;
+  height: 2px;
+  width: 35px;
+}
 
 .change .navbar-icon__line:last-child {
   transform: translate(0, -4px) rotate(45deg);
@@ -84,6 +97,7 @@
   width: 35px;
 }
 
+/*==============================================================*/
 
 .navbar-list {
   position: absolute;
@@ -96,76 +110,290 @@
   background-color: $color--navbarbackground;
   transition: $transition;
   z-index: 1;
+
   &.active {
     bottom: 0;
     height: 378px;
   }
+
   &__item {
     height: 89px;
     box-shadow: 0 -2px 0 0 #3B3B3B, 0 3px 0 0 #3B3B3B;
     text-align: left;
-    &::after {
-      height: 0;
-    }
-    &:hover::after {
-      content: "";
-      outline: 2px solid #8d81ac;
-      position: relative;
-      top: -42%;
-      left: 0;
-      width: 8px;
-      height: 53px;
-      z-index: 11;
-      background: #8d81ac;
-      display: block;
-
-    }
   }
+
   &__link {
-    color:white;
-    display:inline-block;
+    position: relative;
+    color: white;
+    display: inline-block;
     padding: 29px 0 0 40px;
     @include font_normal_Monserrat;
     font-size: 26px;
     line-height: 26px;
-    &:hover {
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 2px;
+      border-left: 8px solid $color--lightViolet;
+      z-index: 5;
+      height: 0;
+      transition: $transition;
+    }
+
+    &:focus {
       color: #8D81AC;
+    }
+
+    &:focus::after {
+      height: 53px;
     }
   }
 }
+
 
 .hero-section {
   padding: 49px 0 410px 0;
   @include column_flex-center;
   background-image: url('../img/design/header_background.png');
   @include background_picture;
+
   &__title {
     @include font_bold_Monserrat;
     font-size: 48px;
     line-height: 48px;
-    margin-bottom: 19px ;
+    margin-bottom: 19px;
     color: white;
   }
+
   &__text-info {
     @include font_normal_Monserrat;
     font-size: 18px;
     line-height: 24px;
-    color:$color--lightViolet;
+    color: $color--lightViolet;
     text-align: center;
     margin-bottom: 14px;
   }
+
   &__text-devices {
     @include font_normal_Monserrat;
-    color:$color--grey;
+    color: $color--grey;
     text-transform: uppercase;
   }
 }
 
+/*============================================================================*/
 
+/*MEDIA*/
 
+/*============================================================================*/
+@media screen and (min-width: 481px) and (max-width: 992px) {
 
+  .header-logo {
+    @include row_flex_space-between;
 
+    &__text {
+      @include font_bold_Lato;
+      font-size: 24px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #8D81AC;
+      transition: $transition;
+    }
 
+    &:hover {
+      .header-logo__text {
+        color: white;
+      }
+    }
+  }
+  .header__nav {
+    padding: 22px 20px 56px 20px;
+  }
+  .header-navbar {
+    display: none;
+  }
+  .buy-btn {
+    width: 145px;
+    height: 38px;
+  }
+  .navbar-list {
+    @include row_flex_space-between;
+    transition: $transition;
+    background-color: rgba(39, 38, 42, 1);
+    right: 124px;
+    bottom: unset;
+    height: 21px;
+    width: 68%;
+    overflow: initial;
+    top: 80px;
+
+    &__item {
+      text-align: center;
+      height: unset;
+      box-shadow: none;
+    }
+
+    &__link {
+      color: $color--lightViolet;
+      display: inline-block;
+      padding: 0 5px 0 0;
+      @include font_bold_Monserrat;
+      font-size: 16px;
+      line-height: 18px;
+
+      &:hover {
+        color: white;
+      }
+
+      &:focus::after {
+        display: none;
+      }
+    }
+  }
+  .hero-section {
+    padding: 69px 0 472px 0;
+    &__title {
+      font-size: 72px;
+      line-height: 72px;
+    }
+    &__text-info {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 19px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 993px) /*and (max-width: 1200px)*/ {
+  .header-logo {
+    @include row_flex_space-between;
+
+    &__text {
+      @include font_bold_Lato;
+      font-size: 24px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #8D81AC;
+      transition: $transition;
+    }
+
+    &:hover {
+      .header-logo__text {
+        color: white;
+      }
+    }
+  }
+  .header {
+    background: #010005;
+
+    &__nav {
+      padding: 30px 90px 30px 90px;
+    }
+  }
+
+  .header-navbar {
+    display: none;
+  }
+
+  .header__btn {
+    position:relative;
+  }
+  .buy-btn {
+    width: 145px;
+    height: 38px;
+  }
+  .navbar-list {
+    @include row_flex_space-between;
+    position: absolute;
+    background-color: transparent;
+    right: 284px;
+    bottom: unset;
+    height: 21px;
+    width: 44%;
+    overflow: initial;
+    top: 37px;
+
+    &__item {
+      text-align: center;
+      height: unset;
+      box-shadow: none;
+    }
+
+    &__link {
+      color: $color--lightViolet;
+      display: inline-block;
+      padding: 0 5px 0 0;
+      @include font_bold_Monserrat;
+      font-size: 16px;
+      line-height: 18px;
+
+      &:hover {
+        color: white;
+      }
+
+      &:focus::after {
+        display: none;
+      }
+    }
+  }
+  .hero-section {
+    padding: 83px 0 424px 0;
+    &__title {
+      font-size: 82px;
+      line-height: 82px;
+    }
+    &__text-info {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 19px;
+    }
+    &__text-devices {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1201px) {
+  .navbar-list {
+    @include row_flex_space-between;
+    position: relative;
+    background-color: transparent;
+    right: -85px;
+    bottom: unset;
+    height: 21px;
+    width: 44%;
+    overflow: initial;
+    top: -4px;
+
+    &__item {
+      text-align: center;
+      height: unset;
+      box-shadow: none;
+    }
+
+    &__link {
+      color: $color--lightViolet;
+      display: inline-block;
+      padding: 0 5px 0 0;
+      @include font_bold_Monserrat;
+      font-size: 16px;
+      line-height: 18px;
+
+      &:hover {
+        color: white;
+      }
+
+      &:focus::after {
+        display: none;
+      }
+    }
+  }
+}
 
 
 

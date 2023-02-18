@@ -12,7 +12,6 @@ const sass = gulpSass(dartSass);
 export const scss = () => {
 
     return app.gulp.src(app.path.src.scss, {sourcemaps: app.isDev },)
-        .pipe(app.plugins.replace(/@img\//g,'../img/'))
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "SCSS",

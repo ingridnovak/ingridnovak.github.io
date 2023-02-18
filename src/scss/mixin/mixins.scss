@@ -26,14 +26,17 @@
   font-family: $font-family__Monserrat;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 15px;
 }
 @mixin font_normal_Lato{
-  font-family: 'Lato';
+  font-family: 'Lato',sans-serif;;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+}
+
+@mixin font_bold_Lato {
+  font-family: 'Lato',sans-serif;
+  font-weight: 700;
 }
 
 @mixin background_picture {
@@ -41,3 +44,8 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/*
+@mixin parallax {
+    background-attachment: fixed;
+    }*/
