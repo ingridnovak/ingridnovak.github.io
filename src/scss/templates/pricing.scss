@@ -1,0 +1,87 @@
+@import "../mixin/mixins";
+@import "../variables/variables";
+
+.pricing{
+  background: url("@img/layerPrice.jpg");
+ @include background_picture;
+}
+
+.pricing__title{
+@include font_bold_Monserrat;
+  color:$color--white;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+}
+.price__items{
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+}
+.students{
+  @include font_normal_Monserrat;
+  font-size: 24px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.06);
+  mix-blend-mode: normal;
+  width: 257px;
+  height: 97px;
+  color: $color--white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price--students{
+  background: rgba(255,255,255,0.11);
+  mix-blend-mode: normal;
+  height: 360px;
+@include column_flex-center;
+  padding-top: 30px;
+  & p{
+    color:$color--white;
+
+  }
+}
+.dollar{
+  @include font_normal_Monserrat;
+  font-size: 60px;
+}
+.price--29{
+  @include font_bold_Monserrat;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.month{
+  @include font_normal_Monserrat;
+  padding-top: 20px;
+  text-transform: uppercase;
+  &::after{
+    top: 38px;
+    width: 60px;
+    content: '';
+    position: relative;
+    outline: 3px solid $color--lightViolet;
+    display: block;
+    margin: auto;
+    background: transparent;
+  }
+
+}
+.license{
+  @include font_normal_Monserrat;
+  font-size: 16px;
+  padding-top: 73px;
+}
+.btn__purchase{
+  padding-top: 37px;
+}
+.btn__prices{
+  background: rgba(255,255,255,0.16);
+  width: 163px;
+  height: 45px;
+  border-radius: 30px;
+  border-color: transparent;
+  @include font_normal_Monserrat;
+  font-size: 15px;text-transform: uppercase;
+
+}
