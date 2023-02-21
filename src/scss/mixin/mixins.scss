@@ -1,6 +1,10 @@
 @import "../variables/variables";
 
-@mixin column_flex-center{
+/*=====================================*/
+
+/*POSITIONING*/
+
+@mixin column_flex-center {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,30 +17,101 @@
   align-items: center;
 }
 
-@mixin font_normal_Monserrat{
+
+/*=============================================*/
+
+/*FONTS*/
+
+@mixin font_normal_Monserrat {
   font-family: $font-family__Monserrat;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
 
 }
-
 
 @mixin font_bold_Monserrat {
   font-family: $font-family__Monserrat;
   font-style: normal;
   font-weight: 700;
 }
-@mixin font_normal_Lato{
-  font-family: 'Lato',sans-serif;;
+
+@mixin font_normal_Lato {
+  font-family: 'Lato', sans-serif;;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
 }
 
 @mixin font_bold_Lato {
-  font-family: 'Lato',sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
+}
+
+
+/*==============================================*/
+
+/*ELEMENTS*/
+
+@mixin buy_btn {
+  width: 119px;
+  height: 37px;
+  background-color: $color--lightViolet;
+  border-radius: 40px;
+  font-family: $font-family__Monserrat;
+  font-style: normal;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  transition: $transition;
+  border: 0;
+  &:hover {
+    background-color: white;
+    color: $color--lightViolet;
+    cursor: pointer;
+  }
+}
+
+@mixin logo {
+  &__picture {
+    width: 43px;
+    height: 41px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/design/header_logo.png);
+    transition: 0.3s all ease-in-out;
+  }
+  &:hover {
+    .logo__text {
+      color: white;
+    }
+    .logo__picture {
+      background-image: url(../img/design/header_logo_hover.png);
+
+    }
+  }
+}
+
+
+@mixin logo-text {
+  &__text {
+    @include font_bold_Lato;
+    font-size: 24px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #8D81AC;
+    transition: $transition;
+  }
+}
+
+
+@mixin hero_title {
+  @include font_bold_Monserrat;
+  font-size: 48px;
+  line-height: 48px;
+  color: white;
+
 }
 
 @mixin background_picture {
@@ -45,7 +120,4 @@
   background-position: center;
 }
 
-/*
-@mixin parallax {
-    background-attachment: fixed;
-    }*/
+
