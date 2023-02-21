@@ -1,0 +1,373 @@
+@import "../mixin/mixins";
+@import "../variables/variables";
+
+
+/*========================================================================*/
+
+/*HEADER BLOCKS*/
+.navbar {
+  @include row_flex_space-between;
+}
+
+.logo {
+  @include logo
+}
+
+.header-logo__text {
+  display: none;
+}
+
+.buy-btn {
+  @include buy_btn
+}
+
+.menu-icon {
+  display: inline-block;
+  width: 26px;
+  height: 21px;
+  position: relative;
+  cursor: pointer;
+  transition: $transition;
+  z-index: 0;
+
+  &__line {
+    background-color: white;
+    width: 26px;
+    margin-bottom: 6px;
+    height: 3px;
+    border-radius: 2px;
+    transition: $transition;
+  }
+
+  &__line--short {
+    width: 15px;
+    position: relative;
+    right: -11px;
+    top: 0;
+  }
+}
+
+.menu-list {
+  bottom: 100%;
+  height: 0;
+  overflow: hidden;
+  background-color: $color--navbarbackground;
+  transition: $transition;
+
+  &--active {
+    bottom: 0;
+    height: 378px;
+  }
+
+  &__link-text {
+    padding: 38px 0 31px 40px;
+    @include font_normal_Monserrat;
+    font-size: 26px;
+    line-height: 26px;
+    color: white;
+    &:hover {
+      color: #8D81AC;
+    }
+  }
+
+  &__link {
+    position: relative;
+    width: 293px;
+    display: inline-block;
+    height: 89px;
+    box-shadow: 0 -2px 0 0 #3B3B3B, 0 3px 0 0 #3B3B3B;
+    text-align: left;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 2px;
+      border-left: 8px solid $color--lightViolet;
+      z-index: 5;
+      height: 0;
+      transition: $transition;
+    }
+
+    &:focus::after {
+      height: 53px;
+    }
+  }
+}
+
+.hero-section {
+  &__title {
+    @include hero_title
+  }
+
+  &__text-info {
+    @include font_normal_Monserrat;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color--lightViolet;
+  }
+
+  &__text-devices {
+    @include font_normal_Monserrat;
+    color: $color--grey;
+    text-transform: uppercase;
+  }
+}
+
+/*========================================================================*/
+
+/*POSITIONING*/
+
+.header {
+  @include column_flex-center;
+  background-image: url('../img/design/header_background.png');
+  @include background_picture;
+
+  &__block {
+    background-color: rgba(39, 38, 42, 1);
+    width: 100%;
+  }
+
+  &__navbar {
+    padding: 33px 5px 33px 6px;
+  }
+
+  &__menu-list {
+    position: absolute;
+    top: 107px;
+    right: 15px;
+    z-index: 1;
+  }
+}
+
+.hero-section {
+  padding-top: 47px;
+  padding-bottom: 414px;
+
+  &__title {
+    text-align: center;
+
+    &--margin {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__text-info {
+    text-align: center;
+
+    &--margin {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__text-devices {
+    text-align: center;
+    position: relative;
+  }
+}
+
+/*==============================================================*/
+/*CHANGE icon must be fixed!*/
+.change .menu-icon__line:first-child {
+  opacity: 0;
+}
+
+.change .menu-icon__line:nth-child(2) {
+  transform: translate(0, 4px) rotate(-45deg);
+  border-radius: 0;
+  height: 2px;
+  width: 35px;
+}
+
+.change .menu-icon__line:last-child {
+  transform: translate(0, -4px) rotate(45deg);
+  border-radius: 0;
+  height: 2px;
+  width: 35px;
+}
+
+/*==============================================================*/
+
+
+/*============================================================================*/
+
+/*MEDIA*/
+
+
+/*============================================================================*/
+@media screen and (min-width: 481px) {
+  /*========================================================================*/
+  /*HEADER BLOCKS*/
+  .menu-icon {
+    display: none;
+  }
+
+  .menu-list {
+    @include row_flex_space-between;
+    overflow: unset;
+
+    &__link-text {
+      @include font_bold_Monserrat;
+      font-size: 16px;
+      color: $color--lightViolet;
+      text-align: center;
+      padding: 0;
+      &:hover {
+        color:  white;
+      }
+    }
+
+    &__link {
+      position: unset;
+      display: inline-block;
+      box-shadow: none;
+      width: unset;
+      height: 21px;
+      padding: 0 10px 0 0;
+
+      &:focus::after {
+        display: none;
+      }
+    }
+  }
+
+  .header-logo__text {
+    display: block;
+  }
+
+  .logo {
+    @include logo-text;
+  }
+
+  .header__buy-btn {
+    width: 145px;
+    height: 38px;
+  }
+
+  /*========================================================================*/
+  /*HEADER POSITIONING*/
+  .header-logo {
+    @include row_flex_space-between;
+
+    &__picture {
+      margin-right: 17px;
+    }
+  }
+  .hero-section {
+    &__text-info {
+      margin-bottom: 19px;
+    }
+  }
+
+  /*============================================================================*/
+  @media screen and (min-width: 481px) and (max-width: 992px) {
+    /*========================================================================*/
+
+    /*HEADER BLOCKS*/
+
+    .menu-list {
+      background-color: rgba(39, 38, 42, 1);
+      width: 68%;
+
+      &__link {
+        line-height: 18px;
+      }
+    }
+
+    .hero-section {
+      &__title {
+        font-size: 72px;
+        line-height: 72px;
+      }
+
+      &__text-info {
+        @include font_normal_Lato;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    /*========================================================================*/
+    /*HEADER POSITIONING*/
+    .header {
+      &__navbar {
+        padding: 22px 20px 56px 20px;
+      }
+      &__menu-list {
+        right: 124px;
+        top: 90px;
+        bottom: unset;
+      }
+    }
+
+    .hero-section {
+      padding: 69px 0 468px 0; /*!!!!*/
+    }
+  }
+
+  /*========================================================================*/
+  @media screen and (min-width: 993px) /*and (max-width: 1200px)*/
+  {
+    /*========================================================================*/
+
+    /*HEADER BLOCKS*/
+
+    .header {
+      &__block {
+        background: #010005;
+      }
+
+      &__navbar {
+        padding: 30px 90px 30px 90px;
+      }
+
+      &__btn {
+        position: relative;
+      }
+    }
+
+    .menu-list {
+      background-color: transparent;
+      width: 44%;
+      &__link {
+        line-height: 17px;
+      }
+    }
+
+    .hero-section {
+      &__title {
+        font-size: 82px;
+        line-height: 82px;
+      }
+
+      &__text-info {
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      &__text-devices {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+
+  /*========================================================================*/
+
+  /*HEADER POSITIONING*/
+
+  .hero-section {
+    padding: 83px 0 455px 0;
+  }
+
+  .header__menu-list {
+    position: relative;
+    right: -85px;
+    top: -4px;
+  }
+}
+}
+
+
+
+
+

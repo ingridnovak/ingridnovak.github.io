@@ -16,36 +16,41 @@
 
 </head>
 <body>
-<div class="container">
-    <header class="header">
-        <nav class="header__nav">
-            <a href="#" class="header-logo">
-                <div class="header-logo__picture"></div>
+<header class="header">
+    <div class="header__block">
+    <div class="container">
+        <nav class="navbar header__navbar">
+            <a href="#" class="logo header-logo">
+                <div class="logo__picture header-logo__picture"></div>
+                <p class="logo__text header-logo__text">forkio</p>
             </a>
-            <ul class="navbar-list">
-                <li class="navbar-list__item"><a href="#overview" class="navbar-list__link">Overview</a></li>
-                <li class="navbar-list__item"><a href="#" class="navbar-list__link">About Fork</a></li>
-                <li class="navbar-list__item"><a href="#" class="navbar-list__link">Buying Options</a></li>
-                <li class="navbar-list__item"><a href="#" class="navbar-list__link">Support</a></li>
+            <ul class="menu-list header__menu-list">
+                <li class="menu-list__item"><a href="#overview" class="menu-list__link"><p class="menu-list__link-text">Overview</p></a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link"><p class="menu-list__link-text">About Fork</p></a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link"><p class="menu-list__link-text">Buying Options</p></a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link"><p class="menu-list__link-text">Support</p></a></li>
             </ul>
-            <button type="button" class="buy-btn header__btn">Buy Now</button>
-            <div class="header-navbar">
-                <div class="navbar-icon">
-                    <div class="navbar-icon__line navbar-icon__line--short"></div>
-                    <div class="navbar-icon__line"></div>
-                    <div class="navbar-icon__line"></div>
-                </div>
+            <button type="button" class="buy-btn header__buy-btn">Buy Now</button>
+            <div class="menu-icon">
+                    <div class="menu-icon__line menu-icon__line--short"></div>
+                    <div class="menu-icon__line"></div>
+                    <div class="menu-icon__line"></div>
             </div>
-
         </nav>
-
-    </header>
-    <div class="hero-section">
-        <h1 class="hero-section__title">Fork App</h1>
-        <p class="hero-section__text-info">A Real Gamechanger In The World Of Web-Development</p>
-        <p class="hero-section__text-devices">v. 2.8 For Mac and Windows</p>
     </div>
-</div>
+    </div>
+    <section class="hero-section">
+        <div class="container">
+        <h1 class="hero-section__title hero-section__title--margin">Fork App</h1>
+        <h2 class="hero-section__text-info hero-section__text-info--margin">A Real Gamechanger In The World Of Web-Development</h2>
+        <p class="hero-section__text-devices ">v. 2.8 For Mac and Windows</p>
+        </div>
+    </section>
+</header>
+
+
+
+
 <main>
     <section class="presentText" id="overview">
     <div class="container">
@@ -112,9 +117,9 @@
     </div>
     </div>
         </div>
-
         <div class="feature__photo">
-        <div class="feature__photo--relative">
+            <div class="feature__photo--relative">
+
 <!--            <img src="../img/photoFeat.jpg" alt="Here is what you get">-->
         </div>
         </div>
@@ -122,6 +127,7 @@
 
     </div>
     </div>
+
 </section>
 
 </main>
@@ -162,6 +168,7 @@
             </div>
         </div>
     </div>
+
     <div class="price__item price--third">
         <div class="category agency">
             <p>agency</p>
@@ -193,7 +200,7 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
 </div>
 
 </section>

@@ -11,10 +11,12 @@
   display: flex;
   justify-content: center;
 }
+
 .button--download{
   background: $color--lightViolet;
   border-radius: 40px;
   position: absolute;
+  bottom:-92px;
   width: 290px;
   height: 45px;
   border: 0;
@@ -32,10 +34,9 @@
   }
 }
 .button__description{
-  padding-top: 58px;
+  padding-top: 32px;
  @include font_normal_Monserrat;
   text-align: center;
-
   color: #848E97;
 }
 .present__description{
@@ -72,6 +73,9 @@
   .button--download{
     width: 390px;
     height: 62px;
+    bottom:24px;
+    font-size: 21px;
+    line-height: 23px;
   }
   .button__description{
     padding-top: 81px;
@@ -93,6 +97,8 @@
   .button--download{
     width: 390px;
     height: 62px;
+    font-size: 21px;
+    line-height: 22px;
   }
   .button__description{
     padding-top: 81px;
