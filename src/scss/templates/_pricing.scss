@@ -38,10 +38,8 @@
   justify-content: center;
   align-items: center;
 }
-.agency{
-  background: $category--colorChosenHead;
-  height: 111px;
-}
+
+
 .price--third{
 width: 99%;
   height: 560px;
@@ -73,6 +71,15 @@ width: 99%;
   font-size: 60px;
   text-transform: uppercase;
 }
+.agency {
+  background: $category--colorChosenHead;
+  height: 111px;
+}
+  .price--agency{
+    font-size: 82px;
+  }
+
+
 .month{
   @include font_normal_Monserrat;
   padding-top: 8px;
@@ -110,7 +117,7 @@ width: 99%;
   border-color: transparent;
   @include font_normal_Monserrat;
   font-size: 15px;text-transform: uppercase;
-
+  cursor: pointer;
 }
 .agency__btn{
   background: $category--colorButtonChosen;
@@ -121,6 +128,9 @@ width: 99%;
   padding-top: 83px;
 }
 @media screen and (min-width: 481px) and (max-width: 992px) {
+  .category{
+    font-size: 3.5vw;
+  }
   .pricing{
     min-height: 1319px;
   }
@@ -135,18 +145,25 @@ width: 99%;
   }
   .price__item{
     padding-right: 25px;
-    width: 47%;
+    width: 38%;
     max-width: 319px;
 
   }
   .price--third{
     padding-right: 0;
-    margin-right: 10px;
-    width: 48%;
+    margin-right: 25px;
+    width: 40%;
     max-width: 330px;
   }
-
-
+.price--fourth{
+  margin-right: 40px;
+}
+  .btn__prices{
+    width: 21vw;
+  }
+  .license{
+    font-size: 2vw;
+  }
 
 }
 @media screen and (min-width: 993px){
