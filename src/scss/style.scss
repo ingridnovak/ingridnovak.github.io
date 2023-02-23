@@ -1,7 +1,7 @@
-@import 'templates/header';
-@import 'templates/presentText';
-@import 'templates/features';
-@import "templates/footer";
+@import 'templates/_header';
+@import 'templates/_presentText';
+@import 'templates/_features';
+@import "templates/_pricing";
 
 * {
   margin: 0;
