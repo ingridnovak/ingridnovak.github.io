@@ -10,8 +10,8 @@ export const js = () => {
                 message: "Error: <%= error.message %>"
             })
         ))
-        .pipe(uglify())
-        .pipe(concat('script.min.js'))
+        /*.pipe(uglify())
+        .pipe(concat('script.min.js'))*/
 
         .pipe(app.gulp.dest(app.path.build.js))
         .pipe(app.plugins.browsersync.stream())
