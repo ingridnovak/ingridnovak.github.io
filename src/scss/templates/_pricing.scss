@@ -1,0 +1,192 @@
+@import "../mixin/mixins";
+@import "../variables/variables";
+
+.pricing{
+  background: url("@img/layerPrice.jpg");
+ @include background_picture;
+  height: 100%;
+  min-height: 847px;
+  min-width: 320px;
+}
+
+.pricing__title{
+@include font_bold_Monserrat;
+  color:$color--white;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+
+}
+.price__items{
+  @include column_flex-center;
+  padding-top: 14px;
+  padding-bottom: 10px;
+}
+.price__item{
+  padding-top: 18px;
+  width: 85%;
+}
+.category{
+  @include font_normal_Monserrat;
+  font-size: 24px;
+  text-transform: uppercase;
+  background: $category--colorDefaultHead;
+  mix-blend-mode: normal;
+  height: 97px;
+  color: $color--white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.price--third{
+width: 99%;
+  height: 560px;
+}
+.price--fourth{
+  padding-top: 35px;
+}
+.price--category{
+  background: $category--colorDefaultBody;
+  mix-blend-mode: normal;
+  height: 360px;
+@include column_flex-center;
+  padding-top: 30px;
+  & p{
+    color:$color--white;
+
+  }
+}
+.agency--dark{
+  background: $category--colorChosenBody;
+  height: 449px;
+}
+.dollar{
+  @include font_normal_Monserrat;
+  font-size: 60px;
+}
+.price--29{
+  @include font_bold_Monserrat;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.agency {
+  background: $category--colorChosenHead;
+  height: 111px;
+}
+  .price--agency{
+    font-size: 82px;
+  }
+
+
+.month{
+  @include font_normal_Monserrat;
+  padding-top: 8px;
+  text-transform: uppercase;
+  &::after{
+    top: 38px;
+    width: 60px;
+    content: '';
+    position: relative;
+    outline: 3px solid $color--lightViolet;
+    display: block;
+    margin: auto;
+    background: transparent;
+  }
+
+}
+.license{
+  @include font_normal_Monserrat;
+  font-size: 16px;
+  padding-top: 73px;
+  text-align: center;
+}
+.email{
+  padding-top: 10px;
+}
+
+.btn__purchase{
+  padding-top: 37px;
+}
+.btn__prices{
+  background: $category--colorButtonDefault;
+  width: 163px;
+  height: 45px;
+  border-radius: 30px;
+  border-color: transparent;
+  @include font_normal_Monserrat;
+  font-size: 15px;text-transform: uppercase;
+  cursor: pointer;
+}
+.agency__btn{
+  background: $category--colorButtonChosen;
+  width: 190px;
+  height: 52px;
+}
+.agency--purchase{
+  padding-top: 83px;
+}
+@media screen and (min-width: 481px) and (max-width: 992px) {
+  .category{
+    font-size: 3.5vw;
+  }
+  .pricing{
+    min-height: 1319px;
+  }
+  .pricing__title{
+    padding-top: 95px;
+  }
+
+  .price__items{
+    flex-wrap: wrap;
+    flex-direction: row;
+   justify-content: center;
+  }
+  .price__item{
+    padding-right: 25px;
+    width: 38%;
+    max-width: 319px;
+
+  }
+  .price--third{
+    padding-right: 0;
+    margin-right: 25px;
+    width: 40%;
+    max-width: 330px;
+  }
+.price--fourth{
+  margin-right: 40px;
+}
+  .btn__prices{
+    width: 21vw;
+  }
+  .license{
+    font-size: 2vw;
+  }
+
+}
+@media screen and (min-width: 993px){
+  .price__items{
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 61px;
+  }
+  .price__item{
+    width: 22%;
+  }
+  .price--third{
+    width: 25%;
+  }
+  .category{
+    width: 100%;
+  }
+  .pricing__title{
+    padding-top: 112px;
+    font-size: 48px;
+  }
+  .pricing {
+    background-position: initial;
+  }
+}
