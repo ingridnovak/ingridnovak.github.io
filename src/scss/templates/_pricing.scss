@@ -1,5 +1,5 @@
-@import "../mixin/mixins";
-@import "../variables/variables";
+@import "../mixin/_mixins";
+@import "../variables/_variables";
 
 .pricing{
   background: url("@img/layerPrice.jpg");
@@ -10,13 +10,13 @@
 }
 
 .pricing__title{
-@include font_bold_Monserrat;
+@include font_bold_Main;
   color:$color--white;
   font-size: 28px;
   line-height: 42px;
   text-align: center;
-
 }
+
 .price__items{
   @include column_flex-center;
   padding-top: 14px;
@@ -27,7 +27,7 @@
   width: 85%;
 }
 .category{
-  @include font_normal_Monserrat;
+  @include font_normal_Main;
   font-size: 24px;
   text-transform: uppercase;
   background: $category--colorDefaultHead;
@@ -63,11 +63,11 @@ width: 99%;
   height: 449px;
 }
 .dollar{
-  @include font_normal_Monserrat;
+  @include font_normal_Main;
   font-size: 60px;
 }
 .price--29{
-  @include font_bold_Monserrat;
+  @include font_bold_Main;
   font-size: 60px;
   text-transform: uppercase;
 }
@@ -81,7 +81,7 @@ width: 99%;
 
 
 .month{
-  @include font_normal_Monserrat;
+  @include font_normal_Main;
   padding-top: 8px;
   text-transform: uppercase;
   &::after{
@@ -89,7 +89,7 @@ width: 99%;
     width: 60px;
     content: '';
     position: relative;
-    outline: 3px solid $color--lightViolet;
+    outline: 3px solid $color--accentColor;
     display: block;
     margin: auto;
     background: transparent;
@@ -97,7 +97,7 @@ width: 99%;
 
 }
 .license{
-  @include font_normal_Monserrat;
+  @include font_normal_Main;
   font-size: 16px;
   padding-top: 73px;
   text-align: center;
@@ -115,7 +115,7 @@ width: 99%;
   height: 45px;
   border-radius: 30px;
   border-color: transparent;
-  @include font_normal_Monserrat;
+  @include font_normal_Main;
   font-size: 15px;text-transform: uppercase;
   cursor: pointer;
 }

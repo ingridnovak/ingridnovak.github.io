@@ -1,5 +1,5 @@
-@import "../mixin/mixins";
-@import "../variables/variables";
+@import "../mixin/_mixins";
+@import "../variables/_variables";
 
 
 /*========================================================================*/
@@ -51,7 +51,7 @@
   bottom: 100%;
   height: 0;
   overflow: hidden;
-  background-color: $color--navbarbackground;
+  background-color: $color--navbarBackground;
   transition: $transition;
 
   &--active {
@@ -61,7 +61,7 @@
 
   &__link-text {
     padding: 38px 0 31px 40px;
-    @include font_normal_Monserrat;
+    @include font_normal_Main;
     font-size: 26px;
     line-height: 26px;
     color: white;
@@ -83,7 +83,7 @@
       position: absolute;
       top: 18px;
       left: 2px;
-      border-left: 8px solid $color--lightViolet;
+      border-left: 8px solid $color--accentColor;
       z-index: 5;
       height: 0;
       transition: $transition;
@@ -101,15 +101,15 @@
   }
 
   &__text-info {
-    @include font_normal_Monserrat;
+    @include font_normal_Main;
     font-size: 18px;
     line-height: 24px;
-    color: $color--lightViolet;
+    color: $color--accentColor;
   }
 
   &__text-devices {
-    @include font_normal_Monserrat;
-    color: $color--grey;
+    @include font_normal_Main;
+    color: $color--lightTextColor;
     text-transform: uppercase;
   }
 }
@@ -121,6 +121,7 @@
 .header {
   @include column_flex-center;
   background-image: url('../img/design/header_background.png');
+  min-width: 320px;
   @include background_picture;
 
   &__block {
@@ -129,7 +130,7 @@
   }
 
   &__navbar {
-    padding: 33px 5px 33px 6px;
+    padding: 31px 5px 30px 6px;
   }
 
   &__menu-list {
@@ -141,8 +142,8 @@
 }
 
 .hero-section {
-  padding-top: 47px;
-  padding-bottom: 414px;
+  padding-top: 49px;
+  padding-bottom: 411px;
 
   &__title {
     text-align: center;
@@ -156,7 +157,7 @@
     text-align: center;
 
     &--margin {
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
   }
 
@@ -207,9 +208,9 @@
     overflow: unset;
 
     &__link-text {
-      @include font_bold_Monserrat;
+      @include font_bold_Main;
       font-size: 16px;
-      color: $color--lightViolet;
+      color: $color--accentColor;
       text-align: center;
       padding: 0;
       &:hover {
@@ -281,7 +282,7 @@
       }
 
       &__text-info {
-        @include font_normal_Lato;
+        @include font_normal_Additional;
         font-size: 24px;
         line-height: 24px;
       }

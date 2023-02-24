@@ -1,5 +1,5 @@
-@import "../mixin/mixins";
-@import "../variables/variables";
+@import "../mixin/_mixins";
+@import "../variables/_variables";
 .feature{
   padding-top: 120px;
 }
@@ -8,10 +8,10 @@
 
 }
 .feature__title{
-@include font_normal_Monserrat;
+@include font_normal_Main;
   font-size: 32px;
   font-weight: 700;
-  color: $color--lightViolet;
+  color: $color--accentColor;
   text-align: center;
 }
 .feature__item{
@@ -25,18 +25,18 @@
   }
 }
 .item__title{
-  @include font_normal_Monserrat;
+  @include font_normal_Main;
   font-size: 16px;
 
-  color: $color--darkTitle;
+  color: $color--darkTextColor;
   width: 96%;
 
 }
 .item__description{
-  @include font_normal_Lato;
+  @include font_normal_Additional;
   line-height: 21px;
   padding-top: 14px;
-  color:  $color__greyDescription;
+  color:  $color__lightTextColor;
   width: 96%;
 }
 .item--first{
@@ -94,7 +94,7 @@
   }
   .item__description{
     padding-top: 0;
-    @include font_normal_Monserrat;
+    @include font_normal_Main;
   }
  .feature__photo--relative{
    width: 93%;
@@ -156,7 +156,7 @@
   }
 
   .item__description{
-    @include font_normal_Monserrat;
+    @include font_normal_Main;
     width: 95%;
   }
   .description__first{
