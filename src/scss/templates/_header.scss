@@ -24,7 +24,7 @@
 .menu-icon {
   display: inline-block;
   width: 26px;
-  height: 21px;
+  height: 20px;
   position: relative;
   cursor: pointer;
   transition: $transition;
@@ -65,6 +65,7 @@
     font-size: 26px;
     line-height: 26px;
     color: white;
+    transition: $transition;
     &:hover {
       color: #8D81AC;
     }
@@ -78,6 +79,9 @@
     box-shadow: 0 -2px 0 0 #3B3B3B, 0 3px 0 0 #3B3B3B;
     text-align: left;
 
+    &--bottom-line{
+      box-shadow: 0 -2px 0 0 #3B3B3B, 0 4px 0 0 #3B3B3B;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -89,7 +93,7 @@
       transition: $transition;
     }
 
-    &:focus::after {
+    &:hover::after {
       height: 53px;
     }
   }
@@ -135,7 +139,7 @@
 
   &__menu-list {
     position: absolute;
-    top: 107px;
+    top: 102px;
     right: 15px;
     z-index: 1;
   }
@@ -226,7 +230,7 @@
       height: 21px;
       padding: 0 10px 0 0;
 
-      &:focus::after {
+      &:hover::after {
         display: none;
       }
     }
@@ -307,7 +311,7 @@
   }
 
   /*========================================================================*/
-  @media screen and (min-width: 993px) /*and (max-width: 1200px)*/
+  @media screen and (min-width: 993px)
   {
     /*========================================================================*/
 
