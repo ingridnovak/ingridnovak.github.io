@@ -70,6 +70,9 @@
   background-repeat: no-repeat;
   background-size: 486px;
 }
+.hidden--bottom{
+  display: none;
+}
 @media screen and (min-width: 481px) and (max-width: 992px) {
   .hidden--bottom{
     display: none;
@@ -113,7 +116,9 @@
   .hidden{
     display: none;
   }
-
+  .hidden--bottom{
+    display: block;
+  }
   .feature{
     background-color: #F4F4F4;
     padding-top: 63px;
@@ -159,7 +164,7 @@
   }
 
   .item__description{
-    @include font_normal_Monserrat;
+    @include font_normal_Main;
     width: 100%;
   }
   .feature__photo--relative{
